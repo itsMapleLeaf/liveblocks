@@ -4,7 +4,9 @@
   "workspaces": [
     "shared/*",
     "packages/*",
-    "e2e/next-sandbox"
+    "e2e/next-sandbox",
+    "examples/nextjs-form",
+    "examples/nextjs-whiteboard-advanced"
   ],
   "scripts": {
     "build": "turbo run build",
