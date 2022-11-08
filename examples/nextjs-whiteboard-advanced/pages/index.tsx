@@ -2,9 +2,18 @@ import React from "react";
 import Whiteboard from "../src";
 
 export default function Home() {
+  const [mounted, setMounted] = React.useState(true);
   return (
     <main>
-      <Whiteboard />
+      <div className="p-3 text-center">
+        <button
+          className="rounded bg-indigo-700 px-5 py-2 text-white"
+          onClick={() => setMounted((x) => !x)}
+        >
+          {mounted ? "Unmount" : "Re-mount"}
+        </button>
+      </div>
+      {mounted ? <Whiteboard /> : null}
     </main>
   );
 }
