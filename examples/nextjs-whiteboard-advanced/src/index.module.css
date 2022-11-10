@@ -28,7 +28,7 @@
 }
 
 .renderer_svg {
-  width: 100vw;
+  width: 50vw;
   height: 100vh;
 }
 
@@ -41,7 +41,7 @@
 
 .loading {
   position: absolute;
-  width: 100vw;
+  width: 50vw;
   height: 100vh;
   display: flex;
   place-content: center;

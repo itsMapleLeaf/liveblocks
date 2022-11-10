@@ -2,18 +2,32 @@ import React from "react";
 import Whiteboard from "../src";
 
 export default function Home() {
-  const [mounted, setMounted] = React.useState(true);
+  const [mounted1, setMounted1] = React.useState(true);
+  const [mounted2, setMounted2] = React.useState(false);
   return (
     <main>
-      <div className="p-3 text-center">
+      <div className="space-x-5 p-3 text-center">
         <button
           className="rounded bg-indigo-700 px-5 py-2 text-white"
-          onClick={() => setMounted((x) => !x)}
+          onClick={() => setMounted1((x) => !x)}
         >
-          {mounted ? "Unmount" : "Re-mount"}
+          {mounted1 ? "Unmount" : "Mount"} room <strong>Foo</strong>
+        </button>
+        <button
+          className="rounded bg-indigo-700 px-5 py-2 text-white"
+          onClick={() => setMounted2((x) => !x)}
+        >
+          {mounted2 ? "Unmount" : "Mount"} room <strong>Bar</strong>
         </button>
       </div>
-      {mounted ? <Whiteboard /> : null}
+      <div className="flex min-h-screen space-x-5">
+        <div className="flex-1">
+          {mounted1 ? <Whiteboard roomId="room-foo" /> : null}
+        </div>
+        <div className="flex-1">
+          {mounted2 ? <Whiteboard roomId="room-bar" /> : null}
+        </div>
+      </div>
     </main>
   );
 }

@@ -1,8 +1,7 @@
 .tools_panel_container {
   position: absolute;
   bottom: 24px;
-  right: 0;
-  left: 0;
+  width: 50vw;
   display: flex;
   align-items: center;
   justify-content: center;
